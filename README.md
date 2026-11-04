@@ -2,11 +2,9 @@
 
 # Calculateur de Tsiolkovski
 
-### Propulsion · Python · Visualisation interactive
+### Propulsion · Python · Calcul de delta-v
 
-Estime le delta-v idéal d’une étape de fusée et visualise la répartition de masse.
-
-[**Ouvrir le calculateur interactif ↗**](https://you21293.github.io/Calculateur-d-quation-de-Tsiolkovski/)
+Estime le delta-v idéal d’une étape de fusée et la masse de propergol consommée.
 
 ![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 ![Sans dépendance](https://img.shields.io/badge/dépendances-aucune-2E8B57)
@@ -18,21 +16,15 @@ Estime le delta-v idéal d’une étape de fusée et visualise la répartition d
 
 ## Le projet
 
-Un outil pédagogique pour étudier l’équation de Tsiolkovski. Le calculateur web met à jour les résultats pendant la saisie ; le programme Python fournit le même calcul dans le terminal.
+Un outil pédagogique pour étudier l’équation de Tsiolkovski. Le programme Python demande les paramètres d’un étage et affiche le delta-v idéal ainsi que la masse de propergol consommée.
 
 ## Résultats calculés
 
-- Delta-v idéal, en m/s et en km/s.
+- Delta-v idéal, en m/s et en km/h.
 - Masse de propergol consommée.
-- Rapport de masse et fraction de propergol.
+- Vérification des entrées et messages d’erreur en cas de valeurs incohérentes.
 
 ## Utilisation
-
-### Calculateur web
-
-Ouvre [le calculateur interactif](https://you21293.github.io/Calculateur-d-quation-de-Tsiolkovski/) dans un navigateur récent. Aucune installation n’est nécessaire.
-
-### Programme Python
 
 Python 3.10 ou version ultérieure est requis. Lance le programme depuis le dossier du projet :
 
@@ -60,10 +52,7 @@ Le calcul suppose une étape idéale. Il ne prend pas en compte la gravité pend
 
 ## Fichiers
 
-| Fichier | Rôle |
-|---|---|
-| [\`index.html\`](index.html) | Calculateur interactif et visualisation de masse |
-| [\`main.py\`](main.py) | Fonctions de calcul et interface en ligne de commande |
+[\`main.py\`](main.py) contient les fonctions de calcul et l’interface en ligne de commande.
 
 ---
 
