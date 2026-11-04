@@ -1,78 +1,74 @@
 <div align="center">
 
-# Calculateur de l’équation de Tsiolkovski
+# Calculateur de Tsiolkovski
 
-**Estimer le delta-v idéal et la masse de propergol d’une étape de fusée.**
+### Propulsion · Python · Visualisation interactive
 
-Écrit en Python, sans dépendance externe.
+Estime le delta-v idéal d’une étape de fusée et visualise la répartition de masse.
+
+[**Ouvrir le calculateur interactif ↗**](https://you21293.github.io/Calculateur-d-quation-de-Tsiolkovski/)
+
+![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
+![Sans dépendance](https://img.shields.io/badge/dépendances-aucune-2E8B57)
+![Propulsion spatiale](https://img.shields.io/badge/sujet-propulsion-5865F2)
 
 </div>
 
 ---
 
-## Aperçu
+## Le projet
 
-Le programme demande la vitesse d’éjection des gaz, la masse initiale et la masse finale. Il calcule ensuite la variation de vitesse idéale et la masse de propergol consommée.
+Un outil pédagogique pour étudier l’équation de Tsiolkovski. Le calculateur web met à jour les résultats pendant la saisie ; le programme Python fournit le même calcul dans le terminal.
 
-## Modèle
+## Résultats calculés
 
-L’équation de Tsiolkovski s’écrit :
+- Delta-v idéal, en m/s et en km/s.
+- Masse de propergol consommée.
+- Rapport de masse et fraction de propergol.
 
-$$
-\Delta v = v_e \ln\left(\frac{m_0}{m_f}\right)
-$$
+## Utilisation
 
-La masse de propergol consommée est :
+### Calculateur web
 
-$$
-m_{\mathrm{propergol}} = m_0 - m_f
-$$
+Ouvre [le calculateur interactif](https://you21293.github.io/Calculateur-d-quation-de-Tsiolkovski/) dans un navigateur récent. Aucune installation n’est nécessaire.
 
-où $v_e$ est la vitesse d’éjection effective, $m_0$ la masse initiale et $m_f$ la masse finale après consommation du propergol.
+### Programme Python
 
-## Prérequis
-
-- Python 3.10 ou version ultérieure.
-- Aucune bibliothèque à installer.
-
-## Lancer le programme
-
-Depuis le dossier du projet :
+Python 3.10 ou version ultérieure est requis. Lance le programme depuis le dossier du projet :
 
 \`\`\`bash
 python main.py
 \`\`\`
 
-Sous Windows, cette commande peut aussi être :
+Sous Windows, tu peux aussi utiliser \`py main.py\`.
 
-\`\`\`powershell
-py main.py
-\`\`\`
+Saisis la vitesse d’éjection en m/s et les masses en kg. Les valeurs doivent être positives, avec une masse initiale supérieure à la masse finale.
 
-Saisis les valeurs demandées en unités SI : vitesse en mètres par seconde et masses en kilogrammes.
+## Modèle
 
-### Exemple
+$$
+\Delta v = v_e \ln\left(\frac{m_0}{m_f}\right)
+\qquad
+m_{\mathrm{propergol}} = m_0 - m_f
+$$
 
-\`\`\`text
-=== Calculateur de l'équation de Tsiolkovski ===
-Vitesse d'éjection des gaz (m/s) : 3000
-Masse initiale (kg) : 50000
-Masse finale (kg) : 20000
+où $v_e$ est la vitesse d’éjection effective, $m_0$ la masse initiale et $m_f$ la masse finale.
 
---- Résultats idéaux ---
-Delta-v : 2,748.87 m/s
-Delta-v : 9,895.93 km/h
-Masse de propergol : 30,000.00 kg
-\`\`\`
+## Hypothèses et limites
 
-## Limites du modèle
+Le calcul suppose une étape idéale. Il ne prend pas en compte la gravité pendant la poussée, la traînée atmosphérique, les pertes de pilotage ni les limites réelles du moteur. Pour un lanceur à plusieurs étages, calcule chaque étape séparément.
 
-Le résultat est une estimation idéale pour une étape. Cette équation seule ne prend pas en compte la gravité pendant la poussée, la traînée atmosphérique, les pertes de pilotage ni les limites du moteur. Pour une fusée à plusieurs étages, chaque étape doit être calculée séparément.
+## Fichiers
 
-## Structure
+| Fichier | Rôle |
+|---|---|
+| [\`index.html\`](index.html) | Calculateur interactif et visualisation de masse |
+| [\`main.py\`](main.py) | Fonctions de calcul et interface en ligne de commande |
 
-- \`main.py\` : fonctions de calcul et interface en ligne de commande.
+---
 
-## Auteur
+<div align="center">
 
-Projet personnel d’apprentissage en propulsion spatiale et en programmation Python.
+Projet personnel d’apprentissage en propulsion spatiale et programmation.
+
+</div>
